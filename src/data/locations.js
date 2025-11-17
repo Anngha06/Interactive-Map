@@ -319,7 +319,7 @@ export const LOCATIONS = [
 
   // ODISHA
   {
-    svgId: "INOD",
+    svgId: "INOR",
     id: "odisha",
     name: "Odisha",
     state: "Odisha",
