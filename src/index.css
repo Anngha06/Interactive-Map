@@ -1,0 +1,22 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  color: #111827;              /* near black text */
+  background-color: #f3f4f6;   /* light grey page background */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f3f4f6;
+}
+
+#root {
+  min-height: 100vh;
+}
+

@@ -1,0 +1,218 @@
+ /* -------------------- */
+/* ROOT PAGE STYLING    */
+/* -------------------- */
+
+.app-root {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.app-header {
+  max-width: 960px;
+  margin: 0 auto 16px auto;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.75rem, 2.4vw, 2.25rem);
+  font-weight: 700;
+}
+
+.app-header p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+/* -------------------- */
+/* MAIN LAYOUT          */
+/* -------------------- */
+
+.app-main {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.map-card {
+  width: 100%;
+  max-width: 1150px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 20px;
+}
+
+/* -------------------- */
+/* MAP CONTAINER        */
+/* -------------------- */
+
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-top: 140%; /* aspect ratio box */
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+}
+
+/* -------------------- */
+/* DETAILS PANEL        */
+/* -------------------- */
+
+.details-panel {
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.details-state {
+  margin: 4px 0 6px;
+  font-size: 0.9rem;
+  color: #1d4ed8;
+}
+
+.details-caption {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.details-list {
+  margin: 0 0 12px;
+  padding: 0;
+  display: grid;
+  row-gap: 6px;
+}
+
+.details-row {
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr;
+  column-gap: 8px;
+}
+
+.details-row dt {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.details-row dd {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+.details-placeholder {
+  color: #6b7280;
+}
+
+/* -------------------- */
+/* PARTNER LOGOS        */
+/* -------------------- */
+
+.partners-section {
+  margin-top: 12px;
+}
+
+.partners-section h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* grid holding all partner cards */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.partner-card {
+  margin: 0;
+  padding: 18px 12px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, #ffffff, #f3f4ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.partner-logo {
+  width: 100px;   /* bigger logo */
+  height: 100px;  /* bigger logo */
+  object-fit: contain;
+  padding: 8px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.08);
+}
+
+.partner-card figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #111827;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+/* -------------------- */
+/* RESPONSIVE           */
+/* -------------------- */
+
+@media (max-width: 880px) {
+  .map-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .app-root {
+    padding: 16px;
+  }
+
+  .map-card {
+    padding: 16px;
+    gap: 16px;
+  }
+}
